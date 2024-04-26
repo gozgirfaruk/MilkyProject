@@ -28,5 +28,26 @@ namespace MilkyProject.WebAPI.Controllers
             _categoryService.TInsert(category);
             return Ok("Kategori Başarılı Bir Şekilde Eklendi.");
         }
+
+        [HttpDelete]
+        public IActionResult DeleteCategory(int id)
+        {
+            var values = _categoryService.TGetByID(id);
+            _categoryService.TDelete(values);
+            return Ok("Başarılı Bir Şekilde Silindi.");
+        }
+        [HttpPut]
+        public IActionResult PutCategory(Category category)
+        {
+            _categoryService.TUpdate(category);
+            return Ok("Kategori Başarılı Bir Şekilde Güncellendi.");
+        }
+
+        [HttpGet("GetCategory")]
+        public IActionResult GetCategory(int id)
+        {
+            var values = _categoryService.TGetByID(id);
+            return Ok();
+        }
     }
 }

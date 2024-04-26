@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilkyProject.WebAPI", "MilkyProject.WebAPI\MilkyProject.WebAPI.csproj", "{A8D5B72E-316F-44D1-84DD-63DBF0116BD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilkyProject.WebAPI", "MilkyProject.WebAPI\MilkyProject.WebAPI.csproj", "{A8D5B72E-316F-44D1-84DD-63DBF0116BD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilkyProject.BusinessLayer", "MilkyProject.BusinessLayer\MilkyProject.BusinessLayer.csproj", "{78923628-826A-4115-B43B-CE81D749186E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilkyProject.BusinessLayer", "MilkyProject.BusinessLayer\MilkyProject.BusinessLayer.csproj", "{78923628-826A-4115-B43B-CE81D749186E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilkyProject.DataAccessLayer", "MilkyProject.DataAccessLayer\MilkyProject.DataAccessLayer.csproj", "{A210F4A5-F96C-4EB0-B6F9-22D83F60A3B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilkyProject.DataAccessLayer", "MilkyProject.DataAccessLayer\MilkyProject.DataAccessLayer.csproj", "{A210F4A5-F96C-4EB0-B6F9-22D83F60A3B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilkyProject.DTOLayer", "MilkyProject.DTOLayer\MilkyProject.DTOLayer.csproj", "{51BFFB59-4024-4772-8A2A-58516C183B58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilkyProject.DTOLayer", "MilkyProject.DTOLayer\MilkyProject.DTOLayer.csproj", "{51BFFB59-4024-4772-8A2A-58516C183B58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilkyProject.EntityLayer", "MilkyProject.EntityLayer\MilkyProject.EntityLayer.csproj", "{9D4C977B-885F-41A5-AB3A-E8105E5CC23C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilkyProject.EntityLayer", "MilkyProject.EntityLayer\MilkyProject.EntityLayer.csproj", "{9D4C977B-885F-41A5-AB3A-E8105E5CC23C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilkyProject.WebUI", "MilkyProject.WebUI\MilkyProject.WebUI.csproj", "{F874CC21-BD47-4D51-9ED2-7289390C8663}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{9D4C977B-885F-41A5-AB3A-E8105E5CC23C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D4C977B-885F-41A5-AB3A-E8105E5CC23C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D4C977B-885F-41A5-AB3A-E8105E5CC23C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F874CC21-BD47-4D51-9ED2-7289390C8663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F874CC21-BD47-4D51-9ED2-7289390C8663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F874CC21-BD47-4D51-9ED2-7289390C8663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F874CC21-BD47-4D51-9ED2-7289390C8663}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
