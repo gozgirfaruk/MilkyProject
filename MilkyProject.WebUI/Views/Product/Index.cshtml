@@ -1,0 +1,30 @@
+﻿@model List<MilkyProject.WebUI.DTOS.ResultProductDto>
+@{
+    Layout = null;
+}
+
+<div class="container">
+    <br />
+    <table class="table table-hover">
+        <tr>
+            <th>#</th>
+            <th>Ürün Adı</th>
+            <th>Eski Fiyat</th>
+            <th>Yeni Fiyat</th>
+            <th>Yeni Fiyat</th>
+            <th>Durum</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.productID</td>
+                <td>@item.name</td>
+                <td>@item.oldPrice</td>
+                <td>@item.newPrice</td>
+                <td>@item.status</td>
+                <td><a href="#" class="btn btn-outline-danger btn-group">Sil</a></td>
+            </tr>
+        }
+
+    </table>
+</div>
