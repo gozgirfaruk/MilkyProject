@@ -18,8 +18,8 @@
         <tr>
             <td>@item.categoryID</td>
             <td>@item.name</td>
-            <td><a href="#" class="btn btn-outline-danger">Sil</a></td>
-            <td><a href="#" class="btn btn-outline-warning">Güncelle</a></td>
+            <td><a href="/Category/DeleteCategory/@item.categoryID" class="btn btn-outline-danger">Sil</a></td>
+                <td><a href="/Category/UpdateCategory/@item.categoryID" class="btn btn-outline-warning">Güncelle</a></td>
         </tr>
     }
 </table>
