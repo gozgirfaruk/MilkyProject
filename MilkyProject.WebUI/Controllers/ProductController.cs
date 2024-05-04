@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MilkyProject.WebUI.DTOS;
+using MilkyProject.WebUI.DTOS.ProductDto;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace MilkyProject.WebUI.Controllers
 {
@@ -24,6 +26,67 @@ namespace MilkyProject.WebUI.Controllers
                 return View(values);
             }
             return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> CreateProduct()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateProduct(CreateProduct product)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var jsonData = JsonConvert.SerializeObject(product);
+            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var responseMessage = await client.PostAsync("https://localhost:7237/api/Product", stringContent);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");   
+
+            }
+            return View();
+        }
+
+        public async Task<IActionResult> DeleteProduct(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.DeleteAsync("https://localhost:7237/api/Product?id" + id);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> UpdateProduct(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync("https://localhost:7237/api/Product/GetProduct?id=" + id);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<UpdateProductDto>(jsonData);
+                return View(values);
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateProduct(UpdateProductDto dto)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var jsonData = JsonConvert.SerializeObject(dto);
+            StringContent stringContent = new StringContent(jsonData,Encoding.UTF8,"application/json");
+            var responseMessage = await client.PutAsync("https://localhost:7237/api/Product",stringContent);
+            if(responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+
+            }
+            return View();  
         }
     }
 }
