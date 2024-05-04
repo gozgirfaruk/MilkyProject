@@ -33,6 +33,11 @@ namespace MilkyProject.BusinessLayer.Concrete
             return _categoryDal.GetByID(id);
         }
 
+        public int TGetCategoryCount()
+        {
+            return _categoryDal.GetCategoryCount();
+        }
+
         public void TInsert(Category entity)
         {
             _categoryDal.Insert(entity);

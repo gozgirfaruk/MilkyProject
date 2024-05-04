@@ -28,6 +28,19 @@ namespace MilkyProject.WebUI.Controllers
             return View();
         }
 
+        public async Task<IActionResult> ProductList()
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync("https://localhost:7237/api/Product/GetProductCategory");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<ResultProductWithCategoryDto>>(jsonData);
+                return View(values);
+            }
+            return View();
+        }
+
         [HttpGet]
         public async Task<IActionResult> CreateProduct()
         {

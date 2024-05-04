@@ -33,6 +33,11 @@ namespace MilkyProject.BusinessLayer.Concrete
             return _productDal.GetByID(id);
         }
 
+        public List<Product> TGetProductWithCategory()
+        {
+            return _productDal.GetProductWithCategory();
+        }
+
         public void TInsert(Product entity)
         {
             _productDal.Insert(entity);

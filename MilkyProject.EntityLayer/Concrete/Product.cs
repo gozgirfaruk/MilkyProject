@@ -14,5 +14,8 @@ namespace MilkyProject.EntityLayer.Concrete
         public decimal NewPrice { get; set; }
         public string? ImageUrl { get; set; }
         public bool Status { get; set; }
+        public int? CategoryID { get; set; }
+        public Category Category { get; set; }
+
     }
 }
