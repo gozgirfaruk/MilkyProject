@@ -1,17 +1,28 @@
 ﻿@model MilkyProject.WebUI.DTOS.CategoryDtos.UpdateCategoryDto
 @{
-    Layout = null;
+    ViewData["Title"] = "UpdateCategory";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<form method="post" class="form-controler">
-    <div class="container">
-        <br /><br />
-        <label>Kategori ID</label>
-        <input type="text" asp-for="CategoryId" readonly class="form-control"/>
-        <br /><br />
-        <label>Kategori Adı</label>
-        <input type="text" asp-for="CategoryName" class="form-control" />
-        <br />
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Basic form elements</h4>
+            <p class="card-description">Basic form elements</p>
+            <form class="forms-sample" method="post">
+            
+                <div class="form-group">
+                    <label for="exampleInputName1">Başlık</label>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Kategori Adı" asp-for="CategoryName" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Resim</label>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Kategori Resim Bağlantısı" asp-for="ImageUrl" />
+                </div>
+
+                <button type="submit" class="btn btn-primary mr-2 btn-rounded"> Güncelle </button>
+                <a href="/Category/CategoryList" class="btn btn-outline-dark btn-rounded">Vazgeç</a>
+            </form>
+        </div>
     </div>
-    <button class="btn btn-outline-danger">Kategoriyi Güncelle</button>
-</form>
+</div>

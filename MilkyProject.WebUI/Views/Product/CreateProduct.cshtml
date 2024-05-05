@@ -1,26 +1,39 @@
 ﻿@model MilkyProject.WebUI.DTOS.ProductDto.CreateProduct
 @{
-    Layout = null;
+    ViewData["Title"] = "CreateProduct";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<form method="post" class="form-controler">
-    <div class="container">
-        <br /><br />
-        <label>Ürün Adı</label>
-        <input type="text" asp-for="name" class="form-control" />
-        <br />
-        <label>Eski Fiyatı</label>
-        <input type="text" asp-for="oldPrice" class="form-control" />
-        <br />
-        <label>Yeni Fiyat</label>
-        <input type="text" asp-for="newPrice" class="form-control" />
-        <br />
-        <label>Resim Yolu</label>
-        <input type="text" asp-for="imageUrl" class="form-control" />
-        <br />
-        <label>Durum</label>
-        <input type="text" asp-for="status" class="form-control" />
-        <br />
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Basic form elements</h4>
+            <p class="card-description">Basic form elements</p>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label for="exampleInputName1">Ürün Adı</label>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Kategori Adı" asp-for="name" />
+                </div> <div class="form-group">
+                    <label for="exampleInputName1">Eski Fiyati</label>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Kategori Adı" asp-for="oldPrice" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Yeni Fiyati</label>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Kategori Adı" asp-for="newPrice" />
+                </div>
+             
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Resim</label>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Kategori Resim Bağlantısı" asp-for="imageUrl" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Durum</label>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Kategori Adı" asp-for="status" />
+                </div>
+                
+                <button type="submit" class="btn btn-primary mr-2 btn-rounded"> Kaydet </button>
+                <a href="/Product/Index" class="btn btn-outline-dark btn-rounded">Vazgeç</a>
+            </form>
+        </div>
     </div>
-    <button class="bbtn btn-outline-danger">Ekle</button>
-</form>
+</div>

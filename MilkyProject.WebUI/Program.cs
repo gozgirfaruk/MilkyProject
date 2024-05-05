@@ -1,3 +1,8 @@
+using MilkyProject.BusinessLayer.Abstract;
+using MilkyProject.BusinessLayer.Concrete;
+using MilkyProject.DataAccessLayer.Abstract;
+using MilkyProject.DataAccessLayer.EntityFramework;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddHttpClient();
 // Add services to the container.

@@ -1,30 +1,55 @@
 ﻿@model List<MilkyProject.WebUI.DTOS.ResultProductDto>
 @{
-    Layout = null;
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
 }
-
-<div class="container">
+<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css" />
+<div class="col-lg-12 grid-margin stretch-card">
     <br />
-    <table class="table table-hover">
-        <tr>
-            <th>#</th>
-            <th>Ürün Adı</th>
-            <th>Eski Fiyat</th>
-            <th>Yeni Fiyat</th>
-            <th>Yeni Fiyat</th>
-            <th>Durum</th>
-        </tr>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.productID</td>
-                <td>@item.name</td>
-                <td>@item.oldPrice</td>
-                <td>@item.newPrice</td>
-                <td>@item.status</td>
-                <td><a href="#" class="btn btn-outline-danger btn-group">Sil</a></td>
-            </tr>
-        }
+    <div class="card">
+        <br />
+        <div class="card-body">
+            <br /><br />
+            <p class="card-description">
+                Tablo :  <code>Ürün Listesi</code>
+            </p>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Ürün Adı</th>
+                            <th>Eski Fiyat</th>
+                            <th>Yeni Fiyat</th>
+                            <th>Durum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.productID</td>
+                                <td><img src="@item.imageUrl" /> @item.name</td>
+                                <td>@item.oldPrice</td>
+                                <td>@item.newPrice</td>
+                                @if (item.status == true)
+                                {
+                                    <td><i class="fa-light fa-badge-check fa-xl"></i></td>
+                                }
+                                else
+                                {
+                                    <i class="fa-light fa-shield-xmark fa-xl"></i>
+                                }
+                                <td><a href="/Product/UpdateProduct/@item.productID" class="btn btn-outline-success btn-rounded">Güncelle</a></td>
+                                <td><a href="/Product/DeleteProduct/@item.productID" class="btn btn-outline-danger btn-rounded">Sil</a></td>
+                            </tr>
+                        }
 
-    </table>
+                    </tbody>
+                </table>
+                <br />
+                <a href="/Product/CreateProduct/" class="btn btn-outline-dark btn-rounded">Yeni Ürün Girişi</a>
+            </div>
+        </div>
+    </div>
 </div>

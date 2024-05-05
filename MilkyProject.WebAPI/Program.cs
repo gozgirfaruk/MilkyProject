@@ -17,6 +17,9 @@ builder.Services.AddScoped<ISliderDal,EfSliderDal>();
 builder.Services.AddScoped<IProductService,ProductMenager>();
 builder.Services.AddScoped<IProductDal,EfProductDal>();
 
+builder.Services.AddScoped<ICarouselService, CarouselMenager>();
+builder.Services.AddScoped<ICarouselDal,EfCarouselDal>();
+
 builder.Services.AddControllersWithViews().AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 builder.Services.AddDbContext<MilkyContext>();
