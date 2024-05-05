@@ -1,0 +1,39 @@
+﻿@model MilkyProject.WebUI.DTOS.FeatureDto.CreateFeatureDto
+@{
+    ViewData["Title"] = "InsertFeature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Basic form elements</h4>
+            <p class="card-description">Basic form elements</p>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label for="exampleInputName1">Başlık</label>
+                    <input type="text" class="form-control" id="exampleInputName1" asp-for="header" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Açıklama</label>
+                    <input type="text" class="form-control" id="exampleInputEmail3" asp-for="description"/>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword4">1.Madde</label>
+                    <input type="text" class="form-control" id="exampleInputPassword4" asp-for="firstCallOut" />
+                </div>
+                 <div class="form-group">
+                    <label for="exampleInputPassword4">2.Madde</label>
+                    <input type="text" class="form-control" id="exampleInputPassword4" asp-for="secondCallOut" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword4">3.Madde</label>
+                    <input type="text" class="form-control" id="exampleInputPassword4" asp-for="thirdCallOut" />
+                </div>
+                
+                <button type="submit" class="btn btn-primary mr-2 btn-rounded"> Ekle </button>
+            <a href="/Feature/FeatureList" class="btn btn-dark btn-rounded">Vazgeç</a>
+            </form>
+        </div>
+    </div>
+</div>

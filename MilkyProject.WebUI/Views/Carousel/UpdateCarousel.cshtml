@@ -1,0 +1,32 @@
+﻿@model MilkyProject.WebUI.DTOS.CarouselDto.UpdateCarouselDto
+@{
+    ViewData["Title"] = "UpdateCarousel";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+
+            <p class="card-description">Yeni Afiş Ekleme</p>
+            <form class="forms-sample" method="post">
+             
+                <div class="form-group">
+                    <label for="exampleInputName1">Başlık</label>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Karşılama Metni" asp-for="header" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Açıklama</label>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Alt Metin" asp-for="title" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword4">Resim</label>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Kapak Fotografı" asp-for="imageUrl" />
+                </div>
+
+                <button type="submit" class="btn btn-primary mr-2 btn-rounded"> Ekle </button>
+                <a href="/Carousel/CarouselList" class="btn btn-light btn-rounded">Vazgeç</a>
+            </form>
+        </div>
+    </div>
+</div>

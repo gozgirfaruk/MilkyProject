@@ -1,0 +1,43 @@
+﻿@model List<MilkyProject.WebUI.DTOS.FeatureDto.ResultFeatureDto>
+@{
+    ViewData["Title"] = "FeatureList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Striped Table</h4>
+            <br /><br /><br /><br />
+            <p class="card-description">
+               Tablo : <code>Önizleme</code>
+            </p>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Başlık</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var item in Model)
+                        {
+                            <tr>
+                           <td>@item.featureID</td>
+                            <td>@item.header</td>
+                            <td><a href="#" class="btn btn-dark btn-rounded">Detay</a></td>
+                            <td><a href="/Feature/UpdateFeature/@item.featureID" class="btn btn-secondary btn-rounded">Güncelle</a></td>
+                            <td><a href="/Feature/DeleteFeature/@item.featureID" class="btn btn-danger btn-rounded">Sil</a></td>
+                        </tr>
+                        }
+                        
+                    </tbody>
+                </table>
+                <br />
+                <a href="/Feature/CreateFeature/" class="btn btn-info btn-rounded">Yeni Önizleme</a>
+            </div>
+        </div>
+    </div>
+</div>

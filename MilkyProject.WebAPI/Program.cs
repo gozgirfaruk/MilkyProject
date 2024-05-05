@@ -20,6 +20,9 @@ builder.Services.AddScoped<IProductDal,EfProductDal>();
 builder.Services.AddScoped<ICarouselService, CarouselMenager>();
 builder.Services.AddScoped<ICarouselDal,EfCarouselDal>();
 
+builder.Services.AddScoped<IFeatureDal,EfFeatureDal>();
+builder.Services.AddScoped<IFeatureService,FeatureMenager>();
+
 builder.Services.AddControllersWithViews().AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 builder.Services.AddDbContext<MilkyContext>();
