@@ -26,6 +26,9 @@ builder.Services.AddScoped<ICarouselDal,EfCarouselDal>();
 builder.Services.AddScoped<IFeatureDal,EfFeatureDal>();
 builder.Services.AddScoped<IFeatureService,FeatureMenager>();
 
+builder.Services.AddScoped<ITeamService,TeamMenager>();
+builder.Services.AddScoped<ITeamDal,EfTeamDal>();
+
 builder.Services.AddScoped<IServiceService,ServiceMenager>();
 builder.Services.AddScoped<IServiceDal,EfServiceDal>();
 
