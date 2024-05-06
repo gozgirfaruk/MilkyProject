@@ -8,6 +8,9 @@ using System.Text.Json.Serialization;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<IAboutService, AboutMenager>();
+builder.Services.AddScoped<IAboutDal,EfAboutDal>();
+
 builder.Services.AddScoped<ICategoryService,CategoryMenager>();
 builder.Services.AddScoped<ICategoryDal,EfCategoryDal>();
 
@@ -22,6 +25,9 @@ builder.Services.AddScoped<ICarouselDal,EfCarouselDal>();
 
 builder.Services.AddScoped<IFeatureDal,EfFeatureDal>();
 builder.Services.AddScoped<IFeatureService,FeatureMenager>();
+
+builder.Services.AddScoped<IServiceService,ServiceMenager>();
+builder.Services.AddScoped<IServiceDal,EfServiceDal>();
 
 builder.Services.AddControllersWithViews().AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 

@@ -1,0 +1,73 @@
+﻿@model MilkyProject.WebUI.DTOS.AboutDto.CreateAboutDto
+@{
+    ViewData["Title"] = "CreateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<html lang="en">
+
+<body>
+
+    <div class="content-wrapper">
+        <div class="page-header">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Ekleme Paneli</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"> Hakkımızda </li>
+                </ol>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-description">Yeni Hakkımızda Girişi</p>
+                        <form class="forms-sample" method="post">
+                            <div class="form-group">
+                                <label for="exampleInputName1">Başlık</label>
+                                <input type="text" class="form-control" id="exampleInputName1" asp-for="header" />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName1">Açıklama</label>
+                                <input type="text" class="form-control" id="exampleInputName1" asp-for="title" />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName1">Kuruluş Tarihi</label>
+                                <input type="text" class="form-control" id="exampleInputName1" asp-for="since" />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName1">Icon Url</label>
+                                <input type="text" class="form-control" id="exampleInputName1" asp-for="firstIconUrl" />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName1">Alt Metin Başlığı</label>
+                                <input type="text" class="form-control" id="exampleInputName1" asp-for="firstTitle" />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName1">Alt Metin Açıklama</label>
+                                <input type="text" class="form-control" id="exampleInputName1" asp-for="firstDescription" />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName1">Alt Metin Icon</label>
+                                <input type="text" class="form-control" id="exampleInputName1" asp-for="secondIconUrl" />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName1">Alt Metin Başlık</label>
+                                <input type="text" class="form-control" id="exampleInputName1" asp-for="secondTitle" />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName1">Alt Metin Açıklama</label>
+                                <input type="text" class="form-control" id="exampleInputName1" asp-for="secondDescription" />
+                            </div>
+                            <button type="submit" class="btn btn-primary mr-2"> Güncelle </button>
+                            <a href="/About/AboutList" class="btn btn-dark btn-rounded">İptal</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

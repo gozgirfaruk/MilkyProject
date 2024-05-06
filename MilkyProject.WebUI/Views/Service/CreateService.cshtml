@@ -1,0 +1,49 @@
+﻿@model MilkyProject.WebUI.DTOS.ServiceDto.CreateServiceDto
+@{
+    ViewData["Title"] = "CreateService";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="content-wrapper">
+        <div class="page-header">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Servis Ekleme</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"> Servisler </li>
+                </ol>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-description">Yeni Servis Girişi</p>
+                        <form class="forms-sample" method="post">
+                            <div class="form-group">
+                                <label for="exampleInputName1">Başlık</label>
+                                <input type="text" class="form-control" id="exampleInputName1" placeholder="Servis Başlığı Giriniz" asp-for="title" />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail3">Açıklama</label>
+                                <input type="text" class="form-control" id="exampleInputName1" placeholder="Servise ait metin girininiz." asp-for="description" />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword4">Resim</label>
+                                <input type="text" class="form-control" id="exampleInputName1" placeholder="Servis için kullanmak istediğiniz resim yolunu ekleyiniz." asp-for="imageUrl" />
+                            </div>
+                            <button type="submit" class="btn btn-primary mr-2 btn-rounded"> Kaydet </button>
+                            <a href="/Service/ServiceList" class="btn btn-light btn-rounded">İptal</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

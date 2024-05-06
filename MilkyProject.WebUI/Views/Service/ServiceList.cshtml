@@ -1,0 +1,60 @@
+﻿@model List<MilkyProject.WebUI.DTOS.ServiceDto.ResultServiceDto>
+@{
+    ViewData["Title"] = "ServiceList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <div class="content-wrapper">
+
+        <div class="row">
+
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                       
+                        <p class="card-description">
+                           Tablo Liste : <code>Servislerimiz</code>
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Fotograf</th>
+                                        <th>Başlık</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach(var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.serviceId</td>
+                                        <td class="py-1">
+                                            <img src="@item.imageUrl" alt="image" style="height:30px;"/>
+                                        </td>
+                                        <td>@item.title</td>
+                                      <td><a href="#" class="btn btn-success btn-rounded">Göz At</a></td>
+                                      <td><a href="/Service/UpdateService/@item.serviceId" class="btn btn-dark btn-rounded">Güncelle</a></td>
+                                      <td><a href="/Service/DeleteService/@item.serviceId" class="btn btn-danger btn-rounded">Sil</a></td>
+                                    </tr>
+                                    }
+                                    
+                                </tbody>
+                            </table>
+                            <br />
+                            <a href="/Service/CreateService/" class="btn btn-secondary btn-rounded">Yeni Servis Ekle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
