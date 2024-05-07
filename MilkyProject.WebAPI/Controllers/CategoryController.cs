@@ -47,7 +47,7 @@ namespace MilkyProject.WebAPI.Controllers
         public IActionResult GetCategory(int id)
         {
             var values = _categoryService.TGetByID(id);
-            return Ok();
+            return Ok(values);
         }
     }
 }

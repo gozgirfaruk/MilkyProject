@@ -11,8 +11,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IAboutService, AboutMenager>();
 builder.Services.AddScoped<IAboutDal,EfAboutDal>();
 
+builder.Services.AddScoped<IAddressService, AddressMenager>();
+builder.Services.AddScoped<IAddressDal, EfAddressDal>();
+
 builder.Services.AddScoped<ICategoryService,CategoryMenager>();
 builder.Services.AddScoped<ICategoryDal,EfCategoryDal>();
+
+builder.Services.AddScoped<IContactService, ContactMenager>();
+builder.Services.AddScoped<IContactDal,EfContactDal>();
 
 builder.Services.AddScoped<ISliderService,SliderMenager>();
 builder.Services.AddScoped<ISliderDal,EfSliderDal>();
@@ -22,6 +28,9 @@ builder.Services.AddScoped<IProductDal,EfProductDal>();
 
 builder.Services.AddScoped<ICarouselService, CarouselMenager>();
 builder.Services.AddScoped<ICarouselDal,EfCarouselDal>();
+
+builder.Services.AddScoped<ITestimonialDal,EfTestimonialDal>();
+builder.Services.AddScoped<ITestimonialService, TestimonialMenager>();
 
 builder.Services.AddScoped<IFeatureDal,EfFeatureDal>();
 builder.Services.AddScoped<IFeatureService,FeatureMenager>();

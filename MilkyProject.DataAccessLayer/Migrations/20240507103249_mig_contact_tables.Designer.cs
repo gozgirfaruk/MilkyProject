@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MilkyProject.DataAccessLayer.Context;
 
@@ -11,9 +12,10 @@ using MilkyProject.DataAccessLayer.Context;
 namespace MilkyProject.DataAccessLayer.Migrations
 {
     [DbContext(typeof(MilkyContext))]
-    partial class MilkyContextModelSnapshot : ModelSnapshot
+    [Migration("20240507103249_mig_contact_tables")]
+    partial class mig_contact_tables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -157,10 +159,6 @@ namespace MilkyProject.DataAccessLayer.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Subject")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

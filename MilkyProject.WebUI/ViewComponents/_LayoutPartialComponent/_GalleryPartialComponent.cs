@@ -4,7 +4,14 @@ namespace MilkyProject.WebUI.ViewComponents._LayoutPartialComponent
 {
     public class _GalleryPartialComponent : ViewComponent
     {
-       public IViewComponentResult Invoke()
+        //private readonly IHttpClientFactory _httpClientFactory;
+
+        //public _GalleryPartialComponent(IHttpClientFactory httpClientFactory)
+        //{
+        //    _httpClientFactory = httpClientFactory;
+        //}
+
+        public IViewComponentResult Invoke()
         {
             return View();
         }

@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_MilkyLayout.cshtml";
+}
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center py-5">
+        <h1 class="display-3 text-white mb-4 animated slideInDown">Hakkımızda</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="#">Ana Sayfa</a></li>
+            </ol>
+        </nav>
+    </div>
+</div>
+@await Component.InvokeAsync("_AboutPartialComponent")
+<div class="container-fluid banner my-5 py-5" data-parallax="scroll" data-image-src="~/dairy/img/banner.jpg">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
+                <div class="row g-4 align-items-center">
+                    <div class="col-sm-4">
+                        <img class="img-fluid rounded" src="~/dairy/img/banner-1.jpg" alt="">
+                    </div>
+                    <div class="col-sm-8">
+                        <h2 class="text-black mb-3">En iyi Ürünleri Satıyoruz</h2>
+                        <p class="text-black mb-4">Üreticiden tüketiciye doğrudan iletişim</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <div class="row g-4 align-items-center">
+                    <div class="col-sm-4">
+                        <img class="img-fluid rounded" src="~/dairy/img/banner-2.jpg" alt="">
+                    </div>
+                    <div class="col-sm-8">
+                        <h2 class="text-black mb-3">Hep Taze Hep Lezzetli</h2>
+                        <p class="text-black mb-4">Ürünlerimiz günlük olarak yenileniyor ve sizlere sunuluyor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@await Component.InvokeAsync("_TestimonialPartialComponent")

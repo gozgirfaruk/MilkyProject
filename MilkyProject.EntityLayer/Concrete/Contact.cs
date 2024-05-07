@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace MilkyProject.EntityLayer.Concrete
 {
-    public class Address
+    public class Contact
     {
-        public int AddressID { get; set; }
-        public string OurOffice { get; set; }
-        public string Phone { get; set; }
+        public int ContactId { get; set; }
+        public string Name { get; set; }
         public string Mail { get; set; }
-
+        public string Subject { get; set; }
+        public string Description { get; set; }
 
     }
 }
