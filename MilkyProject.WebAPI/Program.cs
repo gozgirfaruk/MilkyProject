@@ -3,9 +3,13 @@ using MilkyProject.BusinessLayer.Concrete;
 using MilkyProject.DataAccessLayer.Abstract;
 using MilkyProject.DataAccessLayer.Context;
 using MilkyProject.DataAccessLayer.EntityFramework;
+using MilkyProject.EntityLayer.Concrete;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<MilkyContext>();
+builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<MilkyContext>();
+builder.Services.AddControllersWithViews();
 
 // Add services to the container.
 builder.Services.AddScoped<IAboutService, AboutMenager>();
@@ -13,6 +17,9 @@ builder.Services.AddScoped<IAboutDal,EfAboutDal>();
 
 builder.Services.AddScoped<IAddressService, AddressMenager>();
 builder.Services.AddScoped<IAddressDal, EfAddressDal>();
+
+builder.Services.AddScoped<IAdminService,IAdminMenager>();
+builder.Services.AddScoped<IAdminDal,EfAdminDal>();
 
 builder.Services.AddScoped<ICategoryService,CategoryMenager>();
 builder.Services.AddScoped<ICategoryDal,EfCategoryDal>();
@@ -49,7 +56,6 @@ builder.Services.AddScoped<IServiceDal,EfServiceDal>();
 
 builder.Services.AddControllersWithViews().AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
-builder.Services.AddDbContext<MilkyContext>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

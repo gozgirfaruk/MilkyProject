@@ -1,13 +1,18 @@
 using MilkyProject.BusinessLayer.Abstract;
 using MilkyProject.BusinessLayer.Concrete;
 using MilkyProject.DataAccessLayer.Abstract;
+using MilkyProject.DataAccessLayer.Context;
 using MilkyProject.DataAccessLayer.EntityFramework;
+using MilkyProject.EntityLayer.Concrete;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddHttpClient();
 // Add services to the container.
 
+
 builder.Services.AddMvc();
+builder.Services.AddDbContext<MilkyContext>();
+builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<MilkyContext>();
 builder.Services.AddControllersWithViews();
 
 
