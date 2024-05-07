@@ -5,11 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MilkyProject.DataAccessLayer.Abstract
+namespace MilkyProject.BusinessLayer.Abstract
 {
-    public interface IProductDal : IGenericDal<Product>
+    public interface IGalleryService : IGenericService<Gallery>
     {
-        List<Product> GetProductWithCategory();
-        
     }
 }

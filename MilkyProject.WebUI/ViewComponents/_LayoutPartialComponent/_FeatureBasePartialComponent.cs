@@ -2,7 +2,7 @@
 
 namespace MilkyProject.WebUI.ViewComponents._LayoutPartialComponent
 {
-    public class _TeamStartPartialComponent : ViewComponent
+    public class _FeatureBasePartialComponent : ViewComponent
     {
         public IViewComponentResult Invoke()
         {

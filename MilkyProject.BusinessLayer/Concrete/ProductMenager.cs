@@ -43,6 +43,8 @@ namespace MilkyProject.BusinessLayer.Concrete
             _productDal.Insert(entity);
         }
 
+      
+
         public void TUpdate(Product entity)
         {
             _productDal.Update(entity);

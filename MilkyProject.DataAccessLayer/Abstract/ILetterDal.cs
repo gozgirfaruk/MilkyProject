@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace MilkyProject.DataAccessLayer.Abstract
 {
-    public interface IProductDal : IGenericDal<Product>
+    public interface ILetterDal : IGenericDal<MailLetter>
     {
-        List<Product> GetProductWithCategory();
         
     }
 }

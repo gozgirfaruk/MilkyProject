@@ -26,6 +26,6 @@ namespace MilkyProject.DataAccessLayer.Context
         public DbSet<Gallery> Galleries { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<Contact> Contacts { get; set; }
-
+        public DbSet<MailLetter> MailLetters { get; set; }
     }
 }

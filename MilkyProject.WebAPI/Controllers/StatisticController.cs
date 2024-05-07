@@ -13,6 +13,7 @@ namespace MilkyProject.WebAPI.Controllers
         public StatisticController(ICategoryService categoryService)
         {
             _categoryService = categoryService;
+          
         }
 
         [HttpGet]
@@ -20,5 +21,6 @@ namespace MilkyProject.WebAPI.Controllers
         {
             return Ok(_categoryService.TGetCategoryCount());
         }
+
     }
 }

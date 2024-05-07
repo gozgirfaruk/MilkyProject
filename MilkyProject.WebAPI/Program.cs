@@ -26,8 +26,14 @@ builder.Services.AddScoped<ISliderDal,EfSliderDal>();
 builder.Services.AddScoped<IProductService,ProductMenager>();
 builder.Services.AddScoped<IProductDal,EfProductDal>();
 
+builder.Services.AddScoped<IGalleryService,GalleryMenager>();
+builder.Services.AddScoped<IGalleryDal,EfGalleryDal>();
+
 builder.Services.AddScoped<ICarouselService, CarouselMenager>();
 builder.Services.AddScoped<ICarouselDal,EfCarouselDal>();
+
+builder.Services.AddScoped<ILetterService,LetterMenager>();
+builder.Services.AddScoped<ILetterDal,EfLetterDal>();
 
 builder.Services.AddScoped<ITestimonialDal,EfTestimonialDal>();
 builder.Services.AddScoped<ITestimonialService, TestimonialMenager>();

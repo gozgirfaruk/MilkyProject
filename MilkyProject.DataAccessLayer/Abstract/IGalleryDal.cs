@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace MilkyProject.DataAccessLayer.Abstract
 {
-    public interface IProductDal : IGenericDal<Product>
+    public interface IGalleryDal : IGenericDal<Gallery>
     {
-        List<Product> GetProductWithCategory();
-        
     }
 }
