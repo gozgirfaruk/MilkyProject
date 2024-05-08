@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MilkyProject.DataAccessLayer.Context
 {
-    public class MilkyContext : IdentityDbContext<AppUser,AppRole,int>
+    public class MilkyContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

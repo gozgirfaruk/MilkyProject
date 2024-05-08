@@ -6,16 +6,9 @@ using MilkyProject.DataAccessLayer.EntityFramework;
 using MilkyProject.EntityLayer.Concrete;
 
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddHttpClient();
-// Add services to the container.
-
-
 builder.Services.AddMvc();
-builder.Services.AddDbContext<MilkyContext>();
-builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<MilkyContext>();
-builder.Services.AddControllersWithViews();
-
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

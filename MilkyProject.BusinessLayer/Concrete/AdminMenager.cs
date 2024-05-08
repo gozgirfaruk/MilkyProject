@@ -9,18 +9,18 @@ using System.Threading.Tasks;
 
 namespace MilkyProject.BusinessLayer.Concrete
 {
-    public class IAdminMenager : IAdminService
+    public class AdminMenager : IAdminService
     {
         private readonly IAdminDal _adminDal;
 
-        public IAdminMenager(IAdminDal adminDal)
+        public AdminMenager(IAdminDal adminDal)
         {
             _adminDal = adminDal;
         }
 
         public void TDelete(Admin entity)
         {
-            throw new NotImplementedException();
+            _adminDal.Delete(entity);
         }
 
         public List<Admin> TGetAll()
@@ -35,12 +35,12 @@ namespace MilkyProject.BusinessLayer.Concrete
 
         public void TInsert(Admin entity)
         {
-            throw new NotImplementedException();
+            _adminDal.Insert(entity);
         }
 
         public void TUpdate(Admin entity)
         {
-            throw new NotImplementedException();
+            _adminDal.Update(entity);
         }
     }
 }
