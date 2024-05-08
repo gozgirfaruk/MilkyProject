@@ -18,6 +18,11 @@ namespace MilkyProject.BusinessLayer.Concrete
             _productDal = productDal;
         }
 
+        public int GetProductCount()
+        {
+            return _productDal.ProductCount();
+        }
+
         public void TDelete(Product entity)
         {
            _productDal.Delete(entity);

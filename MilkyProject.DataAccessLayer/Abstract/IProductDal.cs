@@ -10,6 +10,7 @@ namespace MilkyProject.DataAccessLayer.Abstract
     public interface IProductDal : IGenericDal<Product>
     {
         List<Product> GetProductWithCategory();
+        int ProductCount();
         
     }
 }

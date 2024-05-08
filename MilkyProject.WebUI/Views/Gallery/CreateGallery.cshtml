@@ -1,0 +1,41 @@
+﻿@model MilkyProject.WebUI.DTOS.GalleryDto.CreateGalleryDto
+@{
+    ViewData["Title"] = "CreateGallery";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<html lang="en">
+
+<body>
+
+    <div class="content-wrapper">
+        <div class="page-header">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Galeri</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"> Ekleme </li>
+                </ol>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-description">Yeni Galeri Girişi</p>
+                        <form class="forms-sample" method="post">
+                            <div class="form-group">
+                                <label for="exampleInputName1">Resim Yolu</label>
+                                <input type="text" class="form-control" id="exampleInputName1" asp-for="imageUrl" />
+                            </div>
+                            <button type="submit" class="btn btn-primary mr-2"> Ekle </button>
+                            <a href="/Gallery/GalleryList" class="btn btn-dark btn-round">Vazgeç</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

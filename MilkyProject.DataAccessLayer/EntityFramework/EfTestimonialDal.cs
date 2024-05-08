@@ -15,5 +15,12 @@ namespace MilkyProject.DataAccessLayer.EntityFramework
         public EfTestimonialDal(MilkyContext context) : base(context)
         {
         }
+
+        public int TestCount()
+        {
+            var context = new MilkyContext();
+            var values = context.Testimonials.Count();
+            return values;
+        }
     }
 }

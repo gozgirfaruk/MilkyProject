@@ -28,6 +28,18 @@ namespace MilkyProject.WebUI.Controllers
             return View();
         }
 
+        [HttpDelete]
+        public async Task<IActionResult> DeleteTest(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var result = await client.DeleteAsync("https://localhost:7237/api/TestimonialApi?id="+id);
+            if(result.IsSuccessStatusCode)
+            {
+                return RedirectToAction("TestList");
+            }
+            return View();
+        }
+
 
     }
 }

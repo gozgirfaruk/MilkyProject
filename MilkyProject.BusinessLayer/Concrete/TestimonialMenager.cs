@@ -18,6 +18,11 @@ namespace MilkyProject.BusinessLayer.Concrete
             _testimonialDal = testimonialDal;
         }
 
+        public int GetTestCount()
+        {
+            return _testimonialDal.TestCount();
+        }
+
         public void TDelete(Testimonial entity)
         {
             _testimonialDal.Delete(entity);
