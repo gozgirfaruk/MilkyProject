@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MilkyProject.EntityLayer.Concrete;
 using MilkyProject.WebUI.DTOS.CarouselDto;
 using Newtonsoft.Json;
@@ -6,6 +7,7 @@ using System.Text;
 
 namespace MilkyProject.WebUI.Controllers
 {
+    
     public class CarouselController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;

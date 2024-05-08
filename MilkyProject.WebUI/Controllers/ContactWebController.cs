@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MilkyProject.WebUI.DTOS.ContactDto;
 using Newtonsoft.Json;
 using System.Text;
 
 namespace MilkyProject.WebUI.Controllers
 {
+    [AllowAnonymous]
     public class ContactWebController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
