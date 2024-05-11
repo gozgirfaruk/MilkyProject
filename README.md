@@ -6,9 +6,9 @@
 * Çiftlik ürünlerine göz atabilir, fiyatlar hakkında bilgi sahibi olabilir ve dilediğiniz ürünü satın alabilirsiniz.
 * Herhangi bir sorun karşısında iletişim formunu doldurarak çiftlik yönetimi ile iletişime geçebilirsiniz.
 
-  -> Uygulama SOLID prensiplerine uygun olarak kurumsal mimaride ve Web Api üzerinden geliştirilip MVC ile consume edilmiştir.
+  ⚠️ Uygulama SOLID prensiplerine uygun olarak kurumsal mimaride ve Web Api üzerinden geliştirilip MVC ile consume edilmiştir.
 
-  ### Kullanılan Bazı Teknolojiler
+  ### 💻 Kullanılan Bazı Teknolojiler
   * Asp.Net Core 6.0
   * Entity Framework - CodeFirst -Linq
   * Repository Design Pattern
